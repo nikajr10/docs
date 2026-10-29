@@ -9,7 +9,20 @@ goes live, audit the **entire codebase and its git history** for security vulner
 leaks and personal-data handling problems. **Fix what you can directly in the code**; for anything you
 can't fix, give the exact fix.
 
+## Step 0: Create the report file
+
+Before doing anything else:
+1. Check whether `security-audit.md` exists in the project root.
+2. If it does not exist, create it.
+3. If it already exists, clear it and start fresh.
+4. Add the audit date and project name at the top.
+
+Write the results of **every section** into `security-audit.md` as each section is completed. Do not
+wait until the end.
+
 ## Ground rules
+
+- **Create `security-audit.md` first**, before any other step, and update it after each section.
 
 - **Do not guess.** Base every finding on code you actually read. If something isn't visible
   (infra config, cloud settings, CI, DNS), list exactly what you need from me.
@@ -229,6 +242,8 @@ endpoints that leak system info.
 ---
 
 ## Output format
+
+Complete `security-audit.md` so it contains, in this order:
 
 1. **Executive summary**: the top 5 most critical risks.
 2. **Findings list**: one short paragraph per finding, giving its ID, area (Secrets/Data/Frontend/Backend/AI/Infra),

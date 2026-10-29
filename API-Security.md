@@ -5,12 +5,12 @@ Act as a senior application security engineer and QA lead. Perform a complete se
 
 ## Step 0: Create the Report File
 Before doing anything else:
-1. Check whether `API-Security-Audit.md` exists in the project root.
+1. Check whether `API-Security-Report.md` exists in the project root.
 2. If it does not exist, create it.
 3. If it already exists, clear it and start fresh.
 4. Add the audit date and project name at the top.
 
-Write the results of **every phase** into `API-Security-Audit.md` as each phase is completed. Do not wait until the end.
+Write the results of **every phase** into `API-Security-Report.md` as each phase is completed. Do not wait until the end.
 
 ## Phase 1: Discover the Project
 Explore the repository and determine:
@@ -23,7 +23,7 @@ Explore the repository and determine:
 - Environment/config files and how secrets are loaded
 - Existing tests and test framework
 
-**Write to `API-Security-Audit.md`:** a Project Overview section and an Endpoint Inventory table (Method | Path | Auth Required | Roles | Handler file).
+**Write to `API-Security-Report.md`:** a Project Overview section and an Endpoint Inventory table (Method | Path | Auth Required | Roles | Handler file).
 
 ## Phase 2: Security Review
 Check every endpoint and relevant code path against the categories below. Cite file paths and line numbers for every finding.
@@ -115,7 +115,7 @@ Check every endpoint and relevant code path against the categories below. Cite f
 - Transactions roll back on partial failure
 - Unhandled promise rejections / exceptions
 
-**Write to `API-Security-Audit.md`:** a Security Review section with the result of each of the 12 categories (Pass / Fail / Needs Verification / Not Applicable), all detailed findings, the Permission Matrix, and the Dependency Audit Results.
+**Write to `API-Security-Report.md`:** a Security Review section with the result of each of the 12 categories (Pass / Fail / Needs Verification / Not Applicable), all detailed findings, the Permission Matrix, and the Dependency Audit Results.
 
 ## Phase 3: Testing
 1. Run the existing test suite and record the results.
@@ -129,10 +129,10 @@ Check every endpoint and relevant code path against the categories below. Cite f
    - A regression test for every vulnerability found
 3. Run the new tests and record pass/fail.
 
-**Write to `API-Security-Audit.md`:** a Testing section with existing test results, list of new test files created, and new test results (pass/fail with reasons for failures).
+**Write to `API-Security-Report.md`:** a Testing section with existing test results, list of new test files created, and new test results (pass/fail with reasons for failures).
 
 ## Phase 4: Final Summary
-Complete `API-Security-Audit.md` so it contains, in this order:
+Complete `API-Security-Report.md` so it contains, in this order:
 
 1. **Header** – project name, audit date, audited by
 2. **Executive Summary** – overall risk level and top issues
@@ -161,11 +161,11 @@ Complete `API-Security-Audit.md` so it contains, in this order:
 Severity levels: **Critical, High, Medium, Low, Info.**
 
 ## Rules
-- Create `API-Security-Audit.md` first, before any other step.
-- Update `API-Security-Audit.md` after each phase; every phase must have its results recorded.
-- Ask before modifying application code; tests and `API-Security-Audit.md` may be created or updated freely.
+- Create `API-Security-Report.md` first, before any other step.
+- Update `API-Security-Report.md` after each phase; every phase must have its results recorded.
+- Ask before modifying application code; tests and `API-Security-Report.md` may be created or updated freely.
 - Do not invent findings. Mark unconfirmed issues as **Needs Verification**.
 - Prioritize real, exploitable issues over theoretical ones.
 - Fixes must match the project's stack, style, and conventions.
 - Never touch production data, real credentials, or external systems.
-- If the project is large, audit module by module and keep updating `API-Security-Audit.md` as each module is completed.
+- If the project is large, audit module by module and keep updating `API-Security-Report.md` as each module is completed.

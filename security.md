@@ -12,18 +12,18 @@ can't fix, give the exact fix.
 ## Step 0: Create the report file
 
 Before doing anything else:
-1. Check whether `security-audit.md` exists in the project root.
+1. Check whether `security-report.md` exists in the project root.
 2. If it does not exist, create it.
 3. If it already exists, clear it and start fresh.
 4. Add the audit date and project name at the top.
 
-Write the results of **every section** into `security-audit.md` as each section is completed. Do not
+Write the results of **every section** into `security-report.md` as each section is completed. Do not
 wait until the end.
 
 ## Ground rules
 
-- **Create `security-audit.md` first**, before any other step.
-- **Update `security-audit.md` after each section**; every section must have its results recorded
+- **Create `security-report.md` first**, before any other step.
+- **Update `security-report.md` after each section**; every section must have its results recorded
   before you move on. Record fixes in it as you make them, and if you revisit a finding, update its
   entry instead of adding a duplicate.
 - **Do not guess.** Base every finding on code you actually read. If something isn't visible
@@ -61,7 +61,7 @@ wait until the end.
    committed, the old value is still in the history. Add a README warning to **rotate every previously
    committed secret immediately**, and explain how to purge the history.
 
-**Write to `security-audit.md`:** a list of every secret found, one short paragraph each: what it is, where it was, what it was moved to, and whether to rotate it (yes/no).
+**Write to `security-report.md`:** a list of every secret found, one short paragraph each: what it is, where it was, what it was moved to, and whether to rotate it (yes/no).
 
 ---
 
@@ -84,7 +84,7 @@ wait until the end.
 7. **Data deletion**: users must be able to delete their data. If there's no way, add a basic flow
    that removes or anonymizes all of a user's personal data.
 
-**Write to `security-audit.md`:** a complete data map, one short paragraph per kind of data: what is collected, where it's stored, where it's sent, and what you fixed.
+**Write to `security-report.md`:** a complete data map, one short paragraph per kind of data: what is collected, where it's stored, where it's sent, and what you fixed.
 
 ---
 
@@ -118,7 +118,7 @@ wait until the end.
   third-party scripts.
 - Errors never show stack traces or sensitive information to users. Check for memory leaks.
 
-**Write to `security-audit.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes.
+**Write to `security-report.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes.
 
 ---
 
@@ -198,7 +198,7 @@ endpoints that leak system info.
 - Migrations: nothing destructive or unsafe, and a rollback path exists.
 - API versioning: deprecated versions don't keep insecure endpoints alive.
 
-**Write to `security-audit.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes.
+**Write to `security-report.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes.
 
 ---
 
@@ -214,7 +214,7 @@ endpoints that leak system info.
 - **Model and data supply chain**: pin model revisions, don't load untrusted pickled weights, and
   don't send data to hosted LLM APIs if the app promises local-only processing.
 
-**Write to `security-audit.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes. If
+**Write to `security-report.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes. If
 the app uses no LLMs, record the whole section as N/A with the reason.
 
 ---
@@ -248,13 +248,13 @@ the app uses no LLMs, record the whole section as N/A with the reason.
   must **fail closed**, not open.
 - Serverless / cold starts: auth and rate limiting still work, and secrets load securely.
 
-**Write to `security-audit.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes.
+**Write to `security-report.md`:** the PASS / FAIL / N/A result for every item in this section, with findings and fixes.
 
 ---
 
 ## Output format
 
-When all sections are done, finish `security-audit.md` so it contains, in this order:
+When all sections are done, finish `security-report.md` so it contains, in this order:
 
 1. **Executive summary**: the top 5 most critical risks.
 2. **Findings list**: one short paragraph per finding, giving its ID, area (Secrets/Data/Frontend/Backend/AI/Infra),

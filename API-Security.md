@@ -1,3 +1,9 @@
+---
+type: audit
+read_when: Only when the owner asks for a full API audit.
+then: workflow.md step 7 (Record)
+---
+
 # API Security Audit & Testing
 
 ## Role

@@ -1,3 +1,9 @@
+---
+type: audit
+read_when: Only when the owner asks for a full security audit.
+then: workflow.md step 7 (Record)
+---
+
 # Security Audit Prompt
 
 Paste everything below the line into a coding agent before deploying.

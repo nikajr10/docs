@@ -1,7 +1,19 @@
+---
+type: standard
+read_when: Writing code in any stack. Read Shared Standards, that stack's section and the Final Checklist.
+then: verification.md
+---
+
 # Languages & Frameworks Guide
 
 ## Role
 Act as a senior full-stack engineer. Use this file as the coding standard for this repository. First find out which stack the project uses, then follow that stack's architecture, folder structure, and conventions. Check its "Do Not Forget" list and the Final Checklist before finishing any task. Work only on this codebase and local/staging environments. Never change production data or live systems.
+
+**Two ways to use this file:**
+- **Normal coding (the default):** use it as a standard. Read Shared Standards, your stack's section, and the Final Checklist. Skip Step 0 and Phases 1 to 6, and do not create `Language-Report.md`. `workflow.md` runs the task.
+- **Stack review:** only when the owner asks for one, run the phases and write `Language-Report.md`.
+
+**Existing projects win.** What a project already does outranks everything in this file. These standards apply to new projects, and to new code where the project has no pattern of its own. Never move a project to TypeScript, a new library or a new structure because this file says so. Checklist items for tools the project does not have are Not Applicable.
 
 ## Stacks I Work With Most
 These are the stacks I use most often. **This is not a priority order.** A project can be in any language or framework, including ones not listed here.
@@ -26,7 +38,7 @@ These are the stacks I use most often. **This is not a priority order.** A proje
 
 **If the project uses a stack not listed here:** apply the Shared Standards, then use that language's own conventions and standard tools for naming, structure, linting, formatting, and testing. Record what you used in the report.
 
-## Step 0: Create the Report File
+## Step 0: Create the Report File (Stack Review Only)
 Before doing anything else:
 1. Check whether `Language-Report.md` exists in the project root.
 2. If it does not exist, create it.
@@ -133,6 +145,7 @@ Priority levels: **Critical, High, Medium, Low, Info.**
 - Pin the Node version (`.nvmrc` + `engines` in `package.json`) and the Python version.
 
 ### Git
+Agents work on the `njr` branch and follow `agent.md`. The branches below are how the repository itself is organised.
 - Small commits with prefixes: `feat:`, `fix:`, `refactor:`, `chore:`, `docs:`, `test:`.
 - Branches: `main` (production), `dev` (staging), `feature/...`, `fix/...`.
 - `.gitignore` covers `node_modules`, `.env`, `dist`, `build`, `.next`, `.venv`, `__pycache__`, `.DS_Store`.
@@ -517,7 +530,7 @@ project-root/
 ### Do Not Forget
 - **Use LTS Node** and pin the version.
 - **Always await promises** and handle errors.
-- Handle **unhandled rejections and uncaught exceptions**: log them and exit cleanly.
+- Catch errors per request, so one bad request cannot end the process. For **unhandled rejections and uncaught exceptions** outside a request, log them and exit cleanly.
 - **Graceful shutdown** on SIGTERM/SIGINT: close the server, DB, and queues.
 - **Timeouts on all external HTTP calls.**
 - **Don't block the event loop.** No heavy sync work or sync file reads in request handlers.
@@ -639,11 +652,11 @@ pip install -r requirements.txt
 - [ ] Lint, format, type check, and tests pass
 - [ ] Production build works
 - [ ] README / setup notes updated if anything changed
-- [ ] `Language-Report.md` complete, with every phase recorded
+- [ ] `Language-Report.md` complete, with every phase recorded (stack review only)
 
 ## Rules
-- Create `Language-Report.md` first, before any other step.
-- Update `Language-Report.md` after each phase; every phase must have its results recorded.
+- In a stack review, create `Language-Report.md` first, before any other step.
+- In a stack review, update `Language-Report.md` after each phase; every phase must have its results recorded.
 - The listed stacks are the ones I use most, not a priority order. A project can be in any language.
 - Match the existing project's structure, naming, and style before applying this guide.
 - Ask before changing the framework, database, or major packages.

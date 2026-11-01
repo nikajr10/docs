@@ -1,3 +1,9 @@
+---
+type: playbook
+read_when: A UI must be built and no design was supplied.
+then: verification.md
+---
+
 # Frontend Design & Build (From Inspiration)
 
 ## Role

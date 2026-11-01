@@ -1,3 +1,9 @@
+---
+type: audit
+read_when: Only when the owner asks for a full backend review.
+then: workflow.md step 7 (Record)
+---
+
 # Backend Engineering Review (Principal-Level)
 
 ## Role

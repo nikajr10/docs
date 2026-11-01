@@ -1,3 +1,9 @@
+---
+type: audit
+read_when: Only when the owner asks for a repo-wide cleanup with no behaviour change.
+then: workflow.md step 7 (Record)
+---
+
 # Codebase Optimization Prompt
 
 A reusable prompt for a full-repository cleanup, refactor, and performance pass that keeps the product exactly as it is. Paste everything below the line into your AI coding assistant.
@@ -498,7 +504,7 @@ Refactor overly complex modules. Improve separation of concerns, dependency dire
 
 ### Phase 7 — Documentation
 
-Create or update `README.md`, `ARCHITECTURE.md`, and `CONTRIBUTING.md` only where useful. An architecture document should cover:
+Create or update `README.md`, `ARCHITECTURE.md`, and `CONTRIBUTING.md` only where useful. If the project uses this docs folder, write architecture notes to `architecture.md` instead of `ARCHITECTURE.md`. An architecture document should cover:
 
 1. Project overview
 2. Repository structure

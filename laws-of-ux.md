@@ -1,3 +1,9 @@
+---
+type: standard
+read_when: Any visible UI change. Start with At a glance and the Checklist.
+then: verification.md
+---
+
 # Laws of UX
 
 The 30 Laws of UX from [lawsofux.com](https://lawsofux.com/) by Jon Yablonski, rewritten in plain words as a design reference for people and AI agents. For the original wording and further reading, open each law's page on the site.

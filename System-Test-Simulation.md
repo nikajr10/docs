@@ -1,3 +1,9 @@
+---
+type: audit
+read_when: Only when the owner asks for worst-case or load testing.
+then: workflow.md step 7 (Record)
+---
+
 # System Testing & Worst-Case Simulation
 
 ## Role

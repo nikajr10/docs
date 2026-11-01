@@ -1,3 +1,9 @@
+---
+type: audit
+read_when: Only when the owner asks for a repo-wide code review.
+then: workflow.md step 7 (Record)
+---
+
 # Code Quality Review & Clean Code Standard
 
 ## Role

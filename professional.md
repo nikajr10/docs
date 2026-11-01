@@ -1,3 +1,9 @@
+---
+type: playbook
+read_when: A Large task or an unclear goal needs deeper thinking, or the owner names this file.
+then: workflow.md step 7 (Record)
+---
+
 ## Step 0: Create the report file
 
 Before doing anything else:

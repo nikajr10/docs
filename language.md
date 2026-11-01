@@ -10,7 +10,7 @@ These are the stacks I use most often. **This is not a priority order.** A proje
 |---|---|
 | **NestJS + TypeORM** | Backend APIs, admin systems, business logic, databases |
 | **Next.js** | Websites, SEO pages, dashboards, full-stack frontend |
-| **React.js** | SPAs, admin panels, widgets, frontend-only prototypes |
+| **React.js** | SPAs, admin panels,  dashboards, widgets, full-stack frontend, frontend-only prototypes |
 | **Node.js** | Scripts, small services, CLI tools, workers, webhooks |
 | **Python** | Fast learning, quick experiments, data/AI scripts, automation |
 

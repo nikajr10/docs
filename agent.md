@@ -44,8 +44,8 @@ them, and `index.md` says how rules rank.
 ## Before you change anything
 
 Read `quality.md` at the start of every session: take the time and tokens a task needs, and never trade quality
-for a quick answer. Then read `overview.md`, `progress.md` and `lessons.md`: they have the
-project map, the current state and the owner's standing rules. `architecture.md` explains how the code is laid
+for a quick answer. Then read `project-description.md`, `overview.md`, `progress.md` and `lessons.md`:
+they have the project's purpose, its map, the current state and the owner's standing rules. `architecture.md` explains how the code is laid
 out, and `decision.md` explains why. Any project-specific policy documents are listed in `overview.md`.
 
 ## Before you commit

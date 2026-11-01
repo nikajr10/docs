@@ -15,7 +15,8 @@ reader who knows nothing about the last session.
 - **Now** and **Next** must always reflect the truth. Replace old content. Do not let it pile up.
 - Keep **Log** to the last 15 entries, and delete older ones. Git history keeps them.
 - `continue` means: pick up **Handoff** if it has content, then finish **Now**. If both are empty, start the top item in
-  **Next** that is not blocked. Do one item, then report and stop, unless the owner says to do more.
+  **Next** that is not blocked. If **Next** is empty too, take the next open task in the current phase of `phases.md`.
+  Do one item, then report and stop, unless the owner says to do more.
 
 ## Now
 

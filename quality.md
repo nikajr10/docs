@@ -1,7 +1,7 @@
 ---
 type: rule
 read_when: Every session, right after agent.md.
-then: overview.md
+then: project-description.md
 ---
 
 # Quality over speed

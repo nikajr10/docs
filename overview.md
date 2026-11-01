@@ -13,7 +13,8 @@ then: progress.md
 
 ## What this is
 
-<Two or three sentences: what the product does, who it is for, and what problem it solves.>
+<Two or three sentences: what the product does, who it is for, and what problem it solves. This must agree with
+`project-description.md`.>
 
 **Stage:** <idea / building / live with users>
 

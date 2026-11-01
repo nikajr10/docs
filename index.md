@@ -15,7 +15,7 @@ that holds this one.
 ## Start of every session
 
 1. Read `agent.md` (hard rules) and `quality.md` (quality bar).
-2. Read `overview.md`. If its front matter says `status: template`, stop and run `setup.md` first, then come back to
+2. Read `project-description.md` and `overview.md`. If the front matter of `overview.md` says `status: template`, stop and run `setup.md` first, then come back to
    the owner's prompt.
 3. Read `progress.md` and `lessons.md`.
 4. Match the owner's prompt to the table below. Read only the files that row names.
@@ -45,6 +45,8 @@ tasks.
 | Deploying, release notes, production problem | `release.md` | `progress.md`, `Release-Report.md` |
 | Setting up plugins, or which plugin suits a job | `plugins-setup.md` | `Plugin-Setup-Report.md` for setup |
 | A diagram, only when the owner asks for one | Diagram Rule in `plugins-setup.md` | `diagrams/` in the project root |
+| What the project is, or a change of direction | `project-description.md` | `project-description.md` |
+| The owner's plans, a roadmap, "make phases" | Phases in `workflow.md`, `project-description.md` | `phases.md` |
 | "What can be better", or doing a suggestion | `suggestion.md`, and Suggestions in `workflow.md` | `suggestion.md` |
 | "Remember this", or the owner corrects you | `lessons.md` | `lessons.md` |
 | "Why did we do X" | `decision.md` | Nothing |
@@ -86,7 +88,7 @@ it in your final message.
 
 ## File types
 
-Every file except `prompt.md` and `suggestion.md` starts with front matter: `type`, `read_when` and `then` (where to go next).
+Every file except `prompt.md`, `suggestion.md` and `phases.md` starts with front matter: `type`, `read_when` and `then` (where to go next).
 
 | Type | Meaning | May you edit it? |
 |---|---|---|
@@ -97,7 +99,8 @@ Every file except `prompt.md` and `suggestion.md` starts with front matter: `typ
 | `standard` | Reference you consult while working | No |
 | `input` | `prompt.md`, the owner's raw prompt and nothing else. It may be empty. | No |
 | `output` | `suggestion.md`, your open suggestions and nothing else. Empty when there are none. | **Yes. Update it after every task.** |
-| `state` | The project files: `overview.md`, `architecture.md`, `decision.md`, `progress.md`, `lessons.md` | **Yes. You keep these current.** |
+| `output` | `phases.md`, the phased plan. Empty until the owner asks for phases. | **Only when the owner asks, or to tick off finished work.** |
+| `state` | The project files: `project-description.md`, `overview.md`, `architecture.md`, `decision.md`, `progress.md`, `lessons.md` | **Yes. You keep these current.** |
 
 Only the project files hold facts about this project. Everything else is generic and shared between projects, so never
 put project facts in it.

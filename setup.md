@@ -19,12 +19,14 @@ git clone --depth 1 https://github.com/nikajr10/docs.git docs && rm -rf docs/.gi
 
 Then give the agent this prompt: `Read docs/setup.md and do it.`
 
-To update the generic rules later, run this. It keeps the project files, `prompt.md` and `suggestion.md`, which belong to this
-project.
+To update the generic rules later, run this. It adds any new files, and keeps the project files, `prompt.md`, `suggestion.md` and
+`phases.md`, which belong to this project.
 
 ```bash
 git clone --depth 1 https://github.com/nikajr10/docs.git /tmp/docs-new \
-  && rsync -a --exclude .git --exclude /prompt.md --exclude /suggestion.md --exclude /overview.md --exclude /architecture.md \
+  && rsync -a --ignore-existing --exclude .git /tmp/docs-new/ docs/ \
+  && rsync -a --exclude .git --exclude /prompt.md --exclude /suggestion.md --exclude /phases.md \
+     --exclude /project-description.md --exclude /overview.md --exclude /architecture.md \
      --exclude /decision.md --exclude /progress.md --exclude /lessons.md /tmp/docs-new/ docs/ \
   && rm -rf /tmp/docs-new
 ```
@@ -92,23 +94,25 @@ Then run the check commands you found, and note which ones pass today.
 
 ## Step 4: Fill in the project files
 
-Fill in these files from what you found. In `overview.md` and `architecture.md`, replace each `<placeholder>` and delete
+Fill in these files from what you found. In `project-description.md`, `overview.md` and `architecture.md`, replace each `<placeholder>` and delete
 the `<!-- -->` comments. In `decision.md`, `progress.md` and `lessons.md`, only add entries. Keep their rules, formats
 and comments, because later work uses them.
 
 | File | Fill in |
 |---|---|
+| `project-description.md` | If the owner already wrote it, keep it and treat it as the truth. If not, write it from the code or the brief. |
 | `overview.md` | What the product is, stack, commands, environments, roles, domain words. Then set `status: filled`. |
 | `architecture.md` | Modules, data flow, data model, auth, integrations, where new code goes. |
 | `decision.md` | Only choices you can see were deliberate, marked `Inferred`. Do not invent reasons. Leave it empty if there are none. |
 | `progress.md` | Today's state: what works, what is unfinished, what fails, and the check command results. |
 | `lessons.md` | Leave the log empty unless Step 2 found rules to carry over. |
+| `phases.md` | Leave it empty. Phases are made only when the owner asks. |
 | `suggestion.md` | What could be better in this project, using the format in `workflow.md`. Leave it empty if there is nothing real. |
 
 Write only what you confirmed. If you could not work something out, write **Needs Verification** beside it. A short true
 file is far more useful than a long guessed one. If the project has no such command or section, write `None`.
 
-For a brand-new project with no code, fill in `overview.md` from the owner's brief, confirm the stack using
+For a brand-new project with no code, fill in `project-description.md` and `overview.md` from the owner's brief, confirm the stack using
 `language.md`, and leave the rest as templates until there is code.
 
 ## Step 5: Commit

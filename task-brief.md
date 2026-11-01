@@ -25,6 +25,7 @@ and other screens that show the same thing.
 
 ## Step 3: Check it against the project
 
+- `project-description.md` and `phases.md`: does this fit what we are doing, and does it belong to a phase?
 - `decision.md`: does this reverse an earlier choice?
 - `lessons.md`: is there a standing rule about this?
 - `progress.md`: has this been started or blocked already?

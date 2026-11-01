@@ -64,6 +64,8 @@ Update the project files in the same commit as the code, so that the docs can ne
 | What happened | Update |
 |---|---|
 | Any task | `progress.md` and `suggestion.md` |
+| Work from a phase was finished, or the plan changed | `phases.md` |
+| The owner changed the project's direction | `project-description.md` |
 | A real choice between options | `decision.md` |
 | Structure, data model, modules or a new integration changed | `architecture.md` |
 | Commands, environments or stack changed | `overview.md` |
@@ -122,6 +124,49 @@ Assume that your context can end at any time and the next agent knows nothing. A
 section. If your tool can
 run agents in parallel, use them for independent work such as separate modules, and review what they return before you
 trust it.
+
+## Phases
+
+`phases.md` holds the phased plan for the whole project. It stays completely empty until the owner gives their plans and
+asks for phases. Never create phases on your own, and never add them during setup.
+
+`phases.md` is the whole route. `progress.md` says where you are on it. The plan for one Large task stays in `progress.md`.
+
+**When the owner asks for phases:**
+
+1. Read the owner's plans, `project-description.md`, `overview.md`, `architecture.md` and `decision.md`.
+2. Split the work into phases, in dependency order. Each phase must leave the product working and be possible to check.
+3. Keep every item from the owner's plans. Your own ideas go in `suggestion.md`.
+4. Write `phases.md` using the format below.
+5. Show the owner and stop. Start the work only when they say `go`, `continue` or name a phase.
+
+**While working through phases:**
+
+- Work in order, unless the owner says otherwise.
+- Put the task in hand under **Now** in `progress.md`.
+- Tick a task as soon as it is finished, in the same commit as the work.
+- When every **Done when** line holds, set the phase to `Done` and the next one to `In progress`.
+- If the owner changes the plan, rewrite the phases it affects, but never rewrite a `Done` phase.
+
+Use this format:
+
+```markdown
+# Phases
+
+**Goal:** <what the whole plan achieves>
+
+## Phase 1: <name>
+
+**Status:** <Not started / In progress / Done>
+**Goal:** <what this phase delivers>
+**Depends on:** <an earlier phase, or nothing>
+
+- [ ] <task>
+- [ ] <task>
+
+**Done when:**
+- <testable result>
+```
 
 ## Suggestions
 

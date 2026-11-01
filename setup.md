@@ -31,6 +31,8 @@ git clone --depth 1 https://github.com/nikajr10/docs.git /tmp/docs-new \
   && rm -rf /tmp/docs-new
 ```
 
+Then commit the updated docs on their own, as one docs-only commit.
+
 ## Step 0: Create the report file
 
 Create `Setup-Report.md` when you run this setup, which is always.

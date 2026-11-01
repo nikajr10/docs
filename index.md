@@ -37,7 +37,7 @@ tasks.
 | A bug, crash, failing test, wrong behaviour | `debugging.md` | Code, test, `Debugging-Report.md` when needed |
 | Writing code in a stack | `language.md`: Shared Standards, that stack's section, Final Checklist | Nothing extra |
 | Any visible UI change | `laws-of-ux.md`: At a glance and Checklist | Nothing extra |
-| A UI with no design supplied | `Frontend-Design-Build.md` | `Frontend-Design-Report.md` |
+| A whole site or major new UI with no design supplied. A small form or page follows the existing UI instead. | `Frontend-Design-Build.md` | `Frontend-Design-Report.md` |
 | Auth, user input, secrets, payments, uploads, permissions | `secure-coding.md` | Code, `Secure-Coding-Report.md` when needed |
 | Database change, public API change, new dependency, deleting or moving a lot | `risky-changes.md` | `decision.md`, `Risky-Changes-Report.md` when needed |
 | Testing, "does it work", finishing a change | `verification.md` | `progress.md`, `Verification-Report.md` when needed |

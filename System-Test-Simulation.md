@@ -20,7 +20,7 @@ All work must be done in the `njr` branch.
 5. Never commit, push, merge, or switch to any other branch during this task.
 
 ## Step 1: Setup
-1. Check whether `System-Test-Simulation-Report.md` exists in the project root. If not, create it. If it exists, clear it and start fresh.
+1. Check whether `System-Test-Simulation-Report.md` exists in the project root. If not, create it. If it exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 2. Add the project name, branch name (`njr`), and test date at the top.
 3. Create a temporary folder `__temp_tests__/` in the project root. Place **all** test files, scripts, seed data, mock data, and load-test configs inside it wherever possible.
 4. Keep a running list called **Created & Modified Files** in the report. Record every file created or changed outside `__temp_tests__/` (e.g., config changes, test seeds, added dependencies). This list is used for cleanup at the end.

@@ -13,7 +13,7 @@ Act as a senior developer setting up Claude Code for this project. Install and v
 Before doing anything else:
 1. Check whether `Plugin-Setup-Report.md` exists in the project root.
 2. If it does not exist, create it.
-3. If it already exists, clear it and start fresh.
+3. If it already exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 4. Add the setup date, project name, and Claude Code version (`claude --version`) at the top.
 
 Write the results of **every phase** into `Plugin-Setup-Report.md` as each phase is completed.

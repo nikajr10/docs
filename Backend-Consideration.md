@@ -19,7 +19,7 @@ All work must be done in the `njr` branch.
 ## Step 1: Create the Report File
 Before reviewing anything:
 1. Check whether `Backend-Consideration-Report.md` exists in the project root.
-2. If it does not exist, create it. If it exists, clear it and start fresh.
+2. If it does not exist, create it. If it exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 3. Add the project name, branch (`njr`), and review date at the top.
 
 Write results into `Backend-Consideration-Report.md` **after each section is reviewed**. Do not wait until the end.

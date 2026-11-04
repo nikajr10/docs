@@ -40,8 +40,8 @@ Create `Setup-Report.md` when you run this setup, which is always.
 Before doing anything else:
 1. Check whether `Setup-Report.md` exists in the project root.
 2. If it does not exist, create it.
-3. If it exists from an earlier task, keep anything still open, clear the rest and start fresh. If it belongs to this
-   task, carry on in it.
+3. If it exists from an earlier run, clear it and write this run's report and findings into the same file. If it
+   belongs to the run still in progress, carry on in it. Never create a second, dated or numbered report file.
 4. Add the date, project name, branch/commit, and a one-line summary of the task at the top.
 
 Write the results of **every step** into it as each step is completed. Do not wait until the end. Record: what you found, which check commands pass, each file you filled in, and each **Needs Verification** item.

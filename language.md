@@ -42,7 +42,7 @@ These are the stacks I use most often. **This is not a priority order.** A proje
 Before doing anything else:
 1. Check whether `Language-Report.md` exists in the project root.
 2. If it does not exist, create it.
-3. If it already exists, clear it and start fresh.
+3. If it already exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 4. Add the date, project name, branch/commit, and a one-line summary of the task at the top.
 
 Write the results of **every phase** into `Language-Report.md` as each phase is completed. Do not wait until the end.

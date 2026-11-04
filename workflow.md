@@ -242,6 +242,8 @@ always write theirs. The playbooks below write one whenever it is necessary.
 
 - Create the report file first, before any other step.
 - Update it after each step. Every step must have its results recorded.
+- One playbook gets one report file, always with the name in the table. Each new run (iteration) clears that file and
+  writes the new report and findings into it. Never create a second, dated or numbered report file.
 - One task gets one report file. If a later playbook applies to the same task, add a section to the existing file.
 - If you revisit a step, update its entry instead of adding a duplicate.
 - Do not invent results. Mark anything unconfirmed as **Needs Verification**.

@@ -13,7 +13,7 @@ Act as a senior software engineer and code reviewer. Review, clean, and improve 
 Before doing anything else:
 1. Check whether `Code-Quality-Report.md` exists in the project root.
 2. If it does not exist, create it.
-3. If it already exists, clear it and start fresh.
+3. If it already exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 4. Add the review date, project name, and branch/commit at the top.
 
 Write the results of **every phase** into `Code-Quality-Report.md` as each phase is completed. Do not wait until the end.

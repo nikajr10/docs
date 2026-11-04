@@ -13,7 +13,7 @@ Act as a senior application security engineer and QA lead. Perform a complete se
 Before doing anything else:
 1. Check whether `API-Security-Report.md` exists in the project root.
 2. If it does not exist, create it.
-3. If it already exists, clear it and start fresh.
+3. If it already exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 4. Add the audit date and project name at the top.
 
 Write the results of **every phase** into `API-Security-Report.md` as each phase is completed. Do not wait until the end.

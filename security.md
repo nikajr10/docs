@@ -20,7 +20,7 @@ can't fix, give the exact fix.
 Before doing anything else:
 1. Check whether `security-report.md` exists in the project root.
 2. If it does not exist, create it.
-3. If it already exists, clear it and start fresh.
+3. If it already exists, clear it and write this run's report and findings into the same file. Never create a second, dated or numbered report file.
 4. Add the audit date and project name at the top.
 
 Write the results of **every section** into `security-report.md` as each section is completed. Do not

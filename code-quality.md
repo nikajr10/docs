@@ -37,6 +37,7 @@ Collect basic numbers before making changes:
 - **Longest functions/components** (top 20)
 - Files with the most imports or dependencies
 - Duplicated code blocks
+- Duplicated UI: raw `<button>`, `<input>`, modals, tables, loaders or empty states built by hand in feature code instead of using a shared component, and near-copies of the same component
 - Unused files, exports, variables, and dependencies
 - Lint errors and warnings count
 - Type errors count (`tsc --noEmit`, mypy/pyright)
@@ -123,6 +124,25 @@ The next developer or LLM must understand a file quickly without reading the who
 - Stable list keys; correct effect dependencies and cleanups.
 - Styles consistent with design tokens; no random inline styles.
 - Accessible markup: labels, alt text, keyboard support.
+
+**Shared UI components**
+- Repeated UI pieces are built once as shared components and reused everywhere. Typical set:
+  - **Actions:** Button, IconButton, Link
+  - **Forms:** Input, Textarea, Select, Checkbox, Radio, Switch, DatePicker, FileUpload, and a FormField wrapper (label + input + hint + error message)
+  - **Overlays:** Modal/Dialog, ConfirmDialog, Drawer, Dropdown/Menu, Tooltip, Popover, Toast
+  - **Data display:** Table/DataTable (with server-side pagination, sorting, loading, empty and error states), Pagination, Card, Badge/Tag, Avatar, Tabs
+  - **States:** Spinner/Loader, Skeleton, EmptyState, ErrorState
+  - **Layout:** PageHeader, Container, Section, Grid/Stack
+- Shared components live in one place (`components/ui/` or `components/common/`, following `language.md`); feature-only components stay inside their feature.
+- **Check for an existing shared component before building a new one.** Feature code does not hand-build a raw `<button>`, `<input>`, modal, table or loader when a shared one exists.
+- Differences go through props (`variant`, `size`, `disabled`, `loading`, `icon`), not copies such as `PrimaryButton2`, `BlueButton` or `NewModal`.
+- If the project uses a component library (shadcn/ui, Radix, MUI, Chakra, Ant Design), shared components wrap or extend it; do not fork or rebuild it.
+- Styled only with design tokens (colour, spacing, radius, typography), so one change updates the whole app.
+- Accessibility built in once: focus styles, keyboard support, ARIA roles, label and error linked to inputs, focus trapped in modals.
+- Shared components stay presentational: no API calls, no business logic, no feature-specific text. Feature components compose them.
+- Promote a component to shared when a second feature needs it; do not pre-build shared components nobody uses yet.
+- Props typed and a short usage note at the top of the file (or a Storybook story if the project has Storybook).
+- Before changing a shared component, check every usage; it changes every screen that uses it.
 
 ### 9. Backend Quality (if applicable)
 - Thin controllers; logic in services.
@@ -233,6 +253,7 @@ Severity levels: **Critical, High, Medium, Low, Info.**
 - Ask before modifying application code; tests and `Code-Quality-Report.md` may be created or updated freely.
 - Refactoring must not change behaviour unless a fix is approved.
 - Keep files short and focused; split long code into well-named custom files.
+- Reuse shared UI components (buttons, inputs, modals, tables, loaders and the rest); never rebuild one inside a feature.
 - Write code that reads like an experienced human wrote it: clear, simple, consistent, no robotic patterns.
 - Write code the next developer or LLM can understand without extra explanation.
 - Follow the project's existing stack, style, and conventions (and `language.md` if present).
